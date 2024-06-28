@@ -154,9 +154,8 @@ class _CustomerListScreenState extends State<CustomerListScreen> {
     );
 
     if (confirm ?? false) {
-      // Refresh the list after deletion
       setState(() {
-        _searchQuery = ''; // Reset search query
+        _searchQuery = '';  
       });
     }
   }

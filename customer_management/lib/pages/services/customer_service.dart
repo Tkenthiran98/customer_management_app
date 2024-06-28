@@ -48,7 +48,7 @@ class CustomerService {
       await _db.collection('customers').doc(customer.id).update(customer.toJson());
     } catch (e) {
       print('Error updating customer: $e');
-      throw e; // Rethrow the exception for UI to handle
+      throw e;  
     }
   }
 

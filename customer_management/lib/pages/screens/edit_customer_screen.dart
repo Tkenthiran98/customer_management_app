@@ -111,16 +111,14 @@ class _EditCustomerScreenState extends State<EditCustomerScreen> {
         String fileName = '${widget.customer.id}_${DateTime.now().millisecondsSinceEpoch}.jpg';
         try {
           await customerService.updateCustomerWithImage(updatedCustomer, _profileImage!, fileName);
-          // Show success message
-          ScaffoldMessenger.of(context).showSnackBar(
+           ScaffoldMessenger.of(context).showSnackBar(
             SnackBar(
               content: Text('Customer updated successfully!'),
               duration: Duration(seconds: 2),
             ),
           );
         } catch (e) {
-          // Handle error, e.g., show error message
-          ScaffoldMessenger.of(context).showSnackBar(
+           ScaffoldMessenger.of(context).showSnackBar(
             SnackBar(
               content: Text('Failed to update customer: $e'),
               duration: Duration(seconds: 2),
@@ -130,16 +128,14 @@ class _EditCustomerScreenState extends State<EditCustomerScreen> {
       } else {
         try {
           await customerService.updateCustomer(updatedCustomer);
-          // Show success message
-          ScaffoldMessenger.of(context).showSnackBar(
+           ScaffoldMessenger.of(context).showSnackBar(
             SnackBar(
               content: Text('Customer updated successfully!'),
               duration: Duration(seconds: 2),
             ),
           );
         } catch (e) {
-          // Handle error, e.g., show error message
-          ScaffoldMessenger.of(context).showSnackBar(
+           ScaffoldMessenger.of(context).showSnackBar(
             SnackBar(
               content: Text('Failed to update customer: $e'),
               duration: Duration(seconds: 2),
